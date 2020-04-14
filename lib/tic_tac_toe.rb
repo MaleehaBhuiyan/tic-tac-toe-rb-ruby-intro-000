@@ -123,9 +123,4 @@ def winner(board)
 end
 
 def play (board)
-  turn_number = 0
-  while turn_number < 9
-    turn(board)
-    turn_number += 1
-  end
 end
