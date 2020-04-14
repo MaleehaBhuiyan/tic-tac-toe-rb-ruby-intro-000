@@ -123,9 +123,8 @@ def winner(board)
 end
 
 def play (board)
-  if over?(board)
-    nil
-  elsif current_player(board)
-  turn(board)
-end
+  until over?(board)
+     current_player(board)
+     turn(board)
+   end
 end
