@@ -123,7 +123,7 @@ def winner(board)
 end
 
 def play (board)
-  while over?(board)
+  until over?(board)
      current_player(board)
      turn(board)
    end
