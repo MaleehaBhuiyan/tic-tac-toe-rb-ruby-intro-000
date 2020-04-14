@@ -123,5 +123,9 @@ def winner(board)
 end
 
 def play (board)
+  if over?(board)
+    nil
+  else
   turn(board)
+end 
 end
