@@ -44,3 +44,39 @@ def turn(board)
     turn(board)
   end
 end
+
+def full?(board)
+  if board.all? {|index| index == "X" || index == "O"}
+    true
+  else
+    false
+  end
+end
+
+def draw?(board)
+  if !won?(board) && full?(board)
+    return true
+  else
+    return false
+  end
+end
+
+def over?(board)
+  if draw?(board) || (won?(board) && full?(board)) || (won?(board) && !full?(board))
+    return true
+  else
+    return false
+  end
+end
+
+def winner(board)
+  position = []
+  position = won?(board)
+  if position == false
+    return nil
+  elsif board[position[0]] == "X"
+    return "X"
+  elsif board[position[0]] == "O"
+    return "O"
+  end
+end
