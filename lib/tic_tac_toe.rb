@@ -127,8 +127,9 @@ def play (board)
      current_player(board)
      turn(board)
    end
-   if winner return "X"
-     puts "Congratulations winner X"
-   elsif winner return "O"
-     puts "Congratulations winner O"   
+   if won?(board)
+     puts "Congratulations winner #{winner(board)}"
+   else
+     puts "Cat's Game!"
+   end
 end
