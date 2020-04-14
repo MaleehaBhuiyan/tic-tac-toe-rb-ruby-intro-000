@@ -125,7 +125,7 @@ end
 def play (board)
   if over?(board)
     nil
-  else
+  elsif current_player(board)
   turn(board)
-end 
+end
 end
