@@ -109,3 +109,15 @@ def over?(board)
     return false
   end
 end
+
+def winner(board)
+  position = []
+  position = won?(board)
+  if position == false
+    return nil
+  elsif board[position[0]] == "X"
+    return "X"
+  elsif board[position[0]] == "O"
+    return "O"
+  end
+end
