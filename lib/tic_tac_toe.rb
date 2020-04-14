@@ -58,3 +58,12 @@ def turn_count(board_array)
   end
   return counter
 end
+
+def current_player(board_array)
+  counter = turn_count(board_array)
+  if counter%2 == 0
+    return "X"
+  elsif counter%2 == 1
+    return "O"
+  end
+end
